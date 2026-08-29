@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#07111f" />
+  <title>Preparação para AZUL | Emanoel Lourenço</title>
+  <style>
+    :root {
+      --bg: #07111f;
+      --bg-2: #0a1728;
+      --text: #f7f9fc;
+      --muted: #aeb9c8;
+      --blue: #1996ff;
+      --blue-2: #36a7ff;
+      --line: rgba(255,255,255,.09);
+      --card: rgba(255,255,255,.035);
+    }
+
+    * { box-sizing: border-box; }
+    html, body { margin: 0; min-height: 100%; }
+
+    body {
+      min-height: 100svh;
+      font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
+      color: var(--text);
+      background:
+        radial-gradient(circle at 50% -10%, rgba(25,150,255,.18), transparent 34%),
+        linear-gradient(180deg, var(--bg-2) 0%, var(--bg) 62%, #050b14 100%);
+      display: grid;
+      place-items: center;
+      padding: 28px 18px;
+    }
+
+    .page {
+      width: min(100%, 470px);
+      min-height: min(760px, calc(100svh - 56px));
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: stretch;
+    }
+
+    .brand {
+      text-align: center;
+      margin-bottom: 34px;
+    }
+
+    .profile-wrap {
+      width: 104px;
+      height: 104px;
+      margin: 0 auto 18px;
+      padding: 4px;
+      border-radius: 50%;
+      background: linear-gradient(145deg, rgba(25,150,255,.6), rgba(255,255,255,.12));
+      box-shadow: 0 14px 50px rgba(0,0,0,.24);
+    }
+
+    .profile-photo {
+      width: 100%;
+      height: 100%;
+      display: block;
+      border-radius: 50%;
+      object-fit: cover;
+      object-position: 50% 20%;
+      border: 1px solid rgba(255,255,255,.08);
+      background: rgba(255,255,255,.04);
+    }
+
+    .instagram {
+      margin: 0 0 8px;
+      font-size: 11px;
+      font-weight: 800;
+      letter-spacing: .02em;
+      color: var(--blue-2);
+      text-decoration: none;
+    }
+
+    h1 {
+      margin: 0;
+      font-size: clamp(28px, 7vw, 38px);
+      line-height: 1.05;
+      letter-spacing: -.045em;
+    }
+
+
+
+    .card {
+      background: var(--card);
+      border: 1px solid var(--line);
+      border-radius: 24px;
+      padding: 18px;
+      box-shadow: 0 24px 80px rgba(0,0,0,.24);
+      backdrop-filter: blur(8px);
+    }
+
+    .cta {
+      width: 100%;
+      min-height: 66px;
+      border-radius: 18px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      padding: 18px 20px;
+      text-align: center;
+      text-decoration: none;
+      color: #fff;
+      background: linear-gradient(135deg, var(--blue), #087ee7);
+      border: 1px solid rgba(255,255,255,.18);
+      box-shadow: 0 16px 38px rgba(25,150,255,.25);
+      font-size: 15px;
+      line-height: 1.25;
+      font-weight: 850;
+      letter-spacing: .005em;
+      transition: transform .18s ease, box-shadow .18s ease, filter .18s ease;
+    }
+
+    .cta:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 20px 46px rgba(25,150,255,.34);
+      filter: brightness(1.04);
+    }
+
+    .cta:active { transform: translateY(0); }
+
+    .whatsapp-icon {
+      width: 20px;
+      height: 20px;
+      flex: 0 0 20px;
+      display: block;
+    }
+
+    .arrow {
+      font-size: 20px;
+      line-height: 1;
+      transform: translateY(-1px);
+    }
+
+    .description {
+      margin: 18px 8px 2px;
+      color: var(--muted);
+      font-size: 14px;
+      line-height: 1.62;
+      text-align: center;
+    }
+
+    .description strong {
+      color: var(--text);
+      font-weight: 700;
+    }
+
+    .footer {
+      text-align: center;
+      margin-top: 34px;
+      font-size: 11px;
+      color: #718095;
+      letter-spacing: .04em;
+    }
+
+    @media (max-width: 390px) {
+      body { padding: 20px 14px; }
+      .brand { margin-bottom: 28px; }
+      .profile-wrap { width: 92px; height: 92px; }
+      .card { border-radius: 21px; padding: 14px; }
+      .description { margin-inline: 4px; }
+    }
+  </style>
+</head>
+<body>
+  <main class="page">
+    <header class="brand">
+      <!-- Coloque a foto do Emanoel na mesma pasta com o nome emanoel.jpg -->
+      <div class="profile-wrap">
+        <img class="profile-photo" src="emanoel.jpg" alt="Foto do Emanoel Lourenço" />
+      </div>
+      <a class="instagram" href="https://www.instagram.com/emanoellourenco.ope/" target="_blank" rel="noopener noreferrer">@emanoellourenco.ope</a>
+      <h1>Emanoel Lourenço</h1>
+    </header>
+
+    <section class="card" aria-label="Acesso ao grupo de preparação">
+      <!-- Substitua o link abaixo pelo link real do grupo -->
+      <a class="cta" href="https://chat.whatsapp.com/SEU-LINK-AQUI" target="_blank" rel="noopener noreferrer">
+        <svg class="whatsapp-icon" viewBox="0 0 32 32" aria-hidden="true" focusable="false">
+          <path fill="currentColor" d="M16.04 3C8.86 3 3.02 8.74 3.02 15.8c0 2.25.6 4.45 1.74 6.38L3 29l7.03-1.82a13.15 13.15 0 0 0 6 1.45h.01c7.18 0 13.02-5.74 13.02-12.8C29.06 8.75 23.22 3 16.04 3Zm0 23.47h-.01a10.96 10.96 0 0 1-5.58-1.51l-.4-.23-4.17 1.08 1.11-4-.26-.41a10.49 10.49 0 0 1-1.66-5.6c0-5.86 4.92-10.63 10.98-10.63 2.93 0 5.69 1.12 7.76 3.15a10.42 10.42 0 0 1 3.22 7.51c0 5.87-4.93 10.64-10.99 10.64Zm6.02-7.95c-.33-.16-1.96-.95-2.26-1.06-.3-.1-.52-.16-.74.16-.22.33-.85 1.06-1.04 1.28-.19.22-.38.25-.71.08-.33-.16-1.39-.5-2.64-1.6a9.86 9.86 0 0 1-1.83-2.24c-.19-.32-.02-.5.14-.66.15-.15.33-.38.49-.57.17-.19.22-.32.33-.54.11-.22.05-.41-.03-.57-.08-.16-.74-1.74-1.01-2.38-.27-.64-.54-.55-.74-.56h-.63c-.22 0-.57.08-.87.41-.3.32-1.15 1.1-1.15 2.68 0 1.58 1.18 3.11 1.34 3.33.16.22 2.31 3.46 5.6 4.85.78.33 1.4.53 1.87.68.79.24 1.5.21 2.07.13.63-.09 1.96-.79 2.24-1.55.27-.76.27-1.42.19-1.55-.08-.14-.3-.22-.63-.38Z"/>
+        </svg>
+        <span>Entrar no Grupo de Preparação para a AZUL</span>
+        <span class="arrow" aria-hidden="true">→</span>
+      </a>
+
+      <p class="description">
+        Entre no grupo de avisos e receba <strong>materiais de apoio, links, datas das aulas e orientações de preparação</strong> para chegar mais preparado às primeiras etapas do processo seletivo da AZUL.
+      </p>
+    </section>
+
+    <footer class="footer">Preparação • Estratégia • Aviação</footer>
+  </main>
+</body>
+</html>
