@@ -5,6 +5,13 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="theme-color" content="#07111f" />
   <title>Preparação para AZUL | Emanoel Lourenço</title>
+  <!-- Google Tag Manager -->
+  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+  })(window,document,'script','dataLayer','GTM-5MPL4Q2S');</script>
+  <!-- End Google Tag Manager -->
   <style>
     :root {
       --bg: #07111f;
@@ -124,6 +131,56 @@
 
     .cta:active { transform: translateY(0); }
 
+    @keyframes training-bounce {
+      0% { transform: translateY(30px); opacity: 0; }
+      35% { transform: translateY(-12px); opacity: 1; }
+      55% { transform: translateY(6px); }
+      72% { transform: translateY(-4px); }
+      88% { transform: translateY(2px); }
+      100% { transform: translateY(0); }
+    }
+
+    .training-cta {
+      min-height: 128px;
+      justify-content: flex-start;
+      gap: 16px;
+      margin-top: 16px;
+      padding: 18px;
+      text-align: left;
+      background: linear-gradient(135deg, #0e78d4, #075aa6);
+      animation: training-bounce .9s cubic-bezier(.22, .75, .25, 1) .25s both;
+    }
+
+    .training-photo {
+      width: 78px;
+      height: 78px;
+      flex: 0 0 78px;
+      display: block;
+      border-radius: 50%;
+      object-fit: cover;
+    }
+
+    .training-copy {
+      flex: 1;
+    }
+
+    .training-copy strong,
+    .training-copy span {
+      display: block;
+    }
+
+    .training-copy strong {
+      font-size: 14px;
+      line-height: 1.35;
+    }
+
+    .training-copy span {
+      margin-top: 7px;
+      font-size: 13px;
+      line-height: 1.3;
+      font-weight: 700;
+    }
+
     .whatsapp-icon {
       width: 20px;
       height: 20px;
@@ -165,9 +222,17 @@
       .card { border-radius: 21px; padding: 14px; }
       .description { margin-inline: 4px; }
     }
+
+    @media (prefers-reduced-motion: reduce) {
+      .training-cta { animation: none; }
+    }
   </style>
 </head>
 <body>
+  <!-- Google Tag Manager (noscript) -->
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5MPL4Q2S"
+  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+  <!-- End Google Tag Manager (noscript) -->
   <main class="page">
     <header class="brand">
       <!-- Coloque a foto do Emanoel na mesma pasta com o nome emanoel.jpg -->
@@ -191,6 +256,15 @@
       <p class="description">
         Entre no grupo de avisos e receba <strong>materiais de apoio, links, datas das aulas e orientações de preparação</strong> para chegar mais preparado às primeiras etapas do processo seletivo da AZUL.
       </p>
+
+      <!-- Substitua o destino abaixo pelo link real do treinamento -->
+      <a class="cta training-cta" href="https://azul.operfilexplicacomissario.com.br/?src=organico-linknabio-instagram&amp;utm_source=organico&amp;utm_content=LinkDaBIO&amp;utm_term=Instagram" target="_blank" rel="noopener noreferrer" aria-label="Conheça o treinamento para o teste de perfil da Azul">
+        <img class="training-photo" src="Azul.jpeg" alt="Foto do curso da Azul" />
+        <span class="training-copy">
+          <strong>Não faça parte de 90% das candidatas ELIMINADAS pelo Teste de perfil da Azul.</strong>
+          <span>Clique aqui e conheça meu treinamento.</span>
+        </span>
+      </a>
     </section>
 
     <footer class="footer">Preparação • Estratégia • Aviação</footer>
