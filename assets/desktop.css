@@ -1,0 +1,144 @@
+/* Local desktop concept. The HTML link and this guard both protect the mobile layout. */
+@media (min-width: 1100px) {
+  body {
+    min-height: 100vh;
+    background-color: #080a17;
+    background-image:
+      linear-gradient(180deg, #080a1778 0%, #080a17ad 48%, #080a17f2 100%),
+      radial-gradient(ellipse at 25% 35%, #26173912, #080a1759 75%),
+      url("desktop-airport.jpg");
+    background-size: cover;
+    background-position: center top;
+    background-attachment: fixed;
+  }
+
+  .page {
+    display: grid;
+    grid-template-columns: minmax(0, .9fr) minmax(0, 1.1fr);
+    align-items: start;
+    column-gap: clamp(28px, 3.4vw, 48px);
+    width: min(calc(100% - 64px), 1280px);
+    min-height: 100vh;
+    margin-inline: auto;
+    padding: 36px 12px 0;
+    overflow: visible;
+    background: transparent;
+    box-shadow: none;
+  }
+
+  .hero {
+    grid-column: 1;
+    grid-row: 1;
+    min-height: 730px;
+    aspect-ratio: auto;
+    margin: 0;
+    isolation: auto;
+  }
+
+  .hero-art {
+    z-index: 0;
+    inset: 58px auto auto -65px;
+    width: calc(100% + 130px);
+    max-width: none;
+    height: auto;
+    object-fit: contain;
+    -webkit-mask-image:
+      linear-gradient(90deg, transparent, #000 13%, #000 84%, transparent),
+      linear-gradient(180deg, transparent, #000 11%, #000 67%, transparent 99%);
+    -webkit-mask-composite: source-in;
+    mask-image:
+      linear-gradient(90deg, transparent, #000 13%, #000 84%, transparent),
+      linear-gradient(180deg, transparent, #000 11%, #000 67%, transparent 99%);
+    mask-composite: intersect;
+  }
+
+  .hero::after {
+    z-index: 1;
+    inset: 57% -5% 15%;
+    background: linear-gradient(180deg, transparent, #080a176b 70%, transparent);
+  }
+
+  .official-logo {
+    top: 0;
+    left: -10px;
+    width: 260px;
+    max-width: 65%;
+    z-index: 2;
+  }
+
+  .hero-title {
+    z-index: 3;
+    right: 0;
+    bottom: 52px;
+    left: 12px;
+    text-align: left;
+  }
+
+  .hero-title h1 {
+    font-size: clamp(50px, 4.55vw, 64px);
+    line-height: .96;
+    letter-spacing: -.04em;
+    text-shadow: 0 5px 30px #000a;
+  }
+
+  .hero-title .title-rule {
+    width: 90px;
+    margin: 20px 0 17px;
+  }
+
+  .hero-title p {
+    font-size: 16px;
+    letter-spacing: .25em;
+  }
+
+  .accesses {
+    grid-column: 2;
+    grid-row: 1;
+    align-self: start;
+    gap: 22px;
+    padding: 12px 0 0;
+  }
+
+  .banner {
+    min-height: 218px;
+    border-radius: 22px;
+    box-shadow: 0 16px 45px #0004;
+  }
+
+  .banner-art {
+    object-fit: contain;
+    object-position: center;
+  }
+
+  .banner-copy { padding: 22px 24px; }
+  .banner h2 { font-size: 30px; line-height: 1.05; }
+  .banner p { margin: 10px 0 14px; font-size: 18px; line-height: 1.35; }
+  .banner-rule { margin-top: 10px; }
+  .action-label { min-height: 46px; gap: 9px; padding: 11px 16px; font-size: 18px; }
+  .whatsapp-icon { width: 23px; height: 23px; flex-basis: 23px; }
+
+  .banner-contact { min-height: 218px; }
+  .banner-contact .banner-copy { width: 73%; }
+  .banner-contact h2 { max-width: 370px; margin-bottom: 17px; font-size: 23px; line-height: 1.13; }
+  .banner-contact::after { background: linear-gradient(90deg, #001d15a6, #001d1533 65%, transparent 85%); }
+
+  .banner-course { min-height: 224px; }
+  .banner-course .banner-art { object-position: left center; }
+  .banner-course .banner-copy { width: 60%; padding-left: 10px; padding-right: 18px; }
+  .banner-course::after { background: linear-gradient(90deg, transparent 25%, #03142a12 43%, #03142a65); }
+
+  .banner-community { min-height: 224px; }
+  .banner-community .banner-copy { width: 77%; }
+  .banner-community p { max-width: 330px; }
+  .banner-community::after { background: linear-gradient(90deg, #14101cc9, #14101c66 60%, transparent 92%); }
+
+  .closing {
+    grid-column: 1 / -1;
+    padding: 18px 32px 30px;
+    background: transparent;
+  }
+
+  .closing p { max-width: 790px; font-size: 17px; line-height: 1.6; }
+  .closing .title-rule { width: 80px; margin-block: 18px; }
+  footer { font-size: 13px; letter-spacing: .1em; }
+}
