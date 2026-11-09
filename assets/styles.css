@@ -147,7 +147,7 @@ footer span { padding-inline: .3em; color: #f4adc6; }
   .banner-course { min-height: 220px; background: #080a17; }
   .banner-community { min-height: 232px; background: #080a17; }
   .banner-copy { padding: 20px 15px; }
-  .banner-contact .banner-copy { width: 77%; }
+  .banner-contact .banner-copy { width: 77%; transform: translateY(-10px); }
   .banner-course .banner-copy { width: 55%; padding-left: 7px; }
   .banner-community .banner-copy { width: 79%; }
   .banner-contact h2 { max-width: 235px; margin-bottom: 17px; }
