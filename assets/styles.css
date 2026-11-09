@@ -135,16 +135,24 @@ footer span { padding-inline: .3em; color: #f4adc6; }
 
 @media (max-width: 480px) {
   .banner { min-height: 194px; }
-  .banner-art { object-fit: contain; object-position: center bottom; }
-  .banner-contact { min-height: 204px; }
-  .banner-course { min-height: 220px; }
-  .banner-community { min-height: 232px; }
+  .banner-art {
+    inset: auto 0 0;
+    height: auto;
+    object-fit: contain;
+    object-position: center bottom;
+    -webkit-mask-image: linear-gradient(to bottom, transparent, #000 12%);
+    mask-image: linear-gradient(to bottom, transparent, #000 12%);
+  }
+  .banner-contact { min-height: 204px; background: #080a17; }
+  .banner-course { min-height: 220px; background: #080a17; }
+  .banner-community { min-height: 232px; background: #080a17; }
   .banner-copy { padding: 20px 15px; }
   .banner-contact .banner-copy { width: 77%; }
-  .banner-course .banner-copy { width: 60%; padding-left: 7px; }
+  .banner-course .banner-copy { width: 55%; padding-left: 7px; }
   .banner-community .banner-copy { width: 79%; }
   .banner-contact h2 { max-width: 235px; margin-bottom: 17px; }
   .banner h2 { font-size: 26px; }
+  .banner-course h2 { font-size: 24px; }
   .banner-contact h2 { font-size: 18px; }
   .banner p { margin-top: 10px; margin-bottom: 15px; font-size: 16px; }
   .action-label { gap: 8px; padding-inline: 12px; font-size: 16px; }
@@ -158,7 +166,8 @@ footer span { padding-inline: .3em; color: #f4adc6; }
   .banner-contact h2 { font-size: 17px; }
   .banner-copy { padding-inline: 13px; }
   .banner-contact .banner-copy { width: 79%; }
-  .banner-course .banner-copy { width: 61%; }
+  .banner-course .banner-copy { width: 55%; }
+  .banner-course h2 { font-size: 20px; }
   .banner-community .banner-copy { width: 83%; }
   .action-label { padding-inline: 10px; gap: 7px; }
   .hero-title h1 { font-size: 31px; }
