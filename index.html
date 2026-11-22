@@ -16,17 +16,52 @@
   <link rel="stylesheet" href="assets/desktop.css" media="(min-width: 1100px)">
   <style>
     .banner-workshop {
-      background: radial-gradient(circle at 100% 0%, #6938b8, transparent 64%),
-        linear-gradient(120deg, #240a55, #46149b);
-      border-color: #a889f066;
+      min-height: 224px;
+      background:
+        radial-gradient(ellipse at 83% 78%, #37156785, transparent 53%),
+        linear-gradient(115deg, #100c1d 3%, #151024 60%, #100a1d);
+      border-color: #9165cc75;
     }
-    .banner-workshop .banner-copy { width: min(100%, 34rem); }
-    .banner-workshop .banner-rule { background: #bd9dff; }
-    .banner-workshop p { color: #efe6ff; }
+    .banner-workshop::after {
+      background: linear-gradient(90deg, #110d1f 4%, #110d1fe8 38%, #110d1f44 65%, transparent 83%);
+    }
+    .workshop-art {
+      position: absolute;
+      right: 8px;
+      top: 50%;
+      width: min(51%, 300px);
+      height: auto;
+      z-index: -2;
+      transform: translateY(-51%);
+      mix-blend-mode: screen;
+      mask-image: linear-gradient(90deg, transparent, #000 18%, #000 96%, #000c);
+      pointer-events: none;
+    }
+    .banner-workshop .banner-copy { width: 65%; padding-right: 0; }
+    .workshop-title-end { display: block; }
+    .banner-workshop .banner-rule { background: #bf8bff; box-shadow: 0 0 14px #9e52ff80; }
+    .banner-workshop p { color: #f0e8ff; }
+    .workshop-time { white-space: nowrap; }
     .banner-workshop .action-label {
-      background: #4bd06f;
-      color: #142c1b;
-      border-color: #70e58e;
+      background: linear-gradient(180deg, #7743d8, #5727a7);
+      border-color: #c49cff91;
+    }
+    @media (max-width: 640px) {
+      .workshop-time { display: block; }
+      .workshop-separator { display: none; }
+    }
+    @media (max-width: 480px) {
+      .banner-workshop { min-height: 216px; }
+      .banner-workshop .banner-copy { width: 67%; }
+      .banner-workshop::after {
+        background: linear-gradient(90deg, #110d1f 4%, #110d1fda 39%, #110d1f28 61%, transparent 83%);
+      }
+      .workshop-art { top: 44%; right: 0; width: 51%; }
+    }
+    @media (max-width: 359px) {
+      .banner-workshop .banner-copy { width: 73%; }
+      .banner-workshop .action-label { font-size: 14px; }
+      .workshop-art { right: -2px; width: 53%; }
     }
   </style>
   <!-- Google Tag Manager -->
@@ -56,10 +91,11 @@
 
     <nav class="accesses" id="acessos" aria-label="Workshop, comunidade, contato e treinamento">
       <a class="banner banner-workshop" href="https://workshop.operfilexplicacomissario.com.br/">
+        <img class="workshop-art" src="assets/workshop-shl-emblema.jpg" width="640" height="640" decoding="async" alt="">
         <div class="banner-copy">
-          <h2>Workshop SHL Sem Medo</h2>
+          <h2>Workshop SHL <span class="workshop-title-end">Sem Medo</span></h2>
           <span class="banner-rule" aria-hidden="true"></span>
-          <p>3 de dezembro · 19h às 22h · Ao vivo</p>
+          <p><span>3 de dezembro</span><span class="workshop-separator"> · </span><span class="workshop-time">19h às 22h · Ao vivo</span></p>
           <span class="action-label"><span>Conhecer o workshop</span><span class="arrow" aria-hidden="true">›</span></span>
         </div>
       </a>
