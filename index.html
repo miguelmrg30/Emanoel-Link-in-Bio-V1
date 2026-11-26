@@ -38,7 +38,6 @@
       pointer-events: none;
     }
     .banner-workshop .banner-copy { width: 65%; padding-right: 0; }
-    .workshop-title-end { display: block; }
     .banner-workshop .banner-rule { background: #bf8bff; box-shadow: 0 0 14px #9e52ff80; }
     .banner-workshop p { color: #f0e8ff; }
     .workshop-time { white-space: nowrap; }
@@ -62,6 +61,79 @@
       .banner-workshop .banner-copy { width: 73%; }
       .banner-workshop .action-label { font-size: 14px; }
       .workshop-art { right: -2px; width: 53%; }
+    }
+
+    .banner-workshop h2 { max-width: 19ch; text-wrap: balance; }
+
+    .banner-community {
+      background: radial-gradient(ellipse at 86% 70%, #66183b, transparent 60%),
+                  linear-gradient(115deg, #151121, #21152e);
+      border-color: #bd4c7470;
+    }
+    .banner-contact {
+      background: radial-gradient(ellipse at 86% 72%, #085e33, transparent 65%),
+                  linear-gradient(115deg, #041812, #06281c);
+      border-color: #4bff9952;
+    }
+    .banner-community::after,
+    .banner-contact::after { background: none; }
+    .banner-community .banner-art,
+    .banner-contact .banner-art {
+      inset: 0 0 0 auto;
+      width: 52%;
+      height: 100%;
+      object-fit: cover;
+      object-position: right center;
+      mask-image: linear-gradient(90deg, transparent, #000 31%, #000 94%, transparent),
+                  linear-gradient(180deg, transparent 2%, #0004 16%, #000 33%, #000 73%, #0004 89%, transparent);
+      mask-composite: intersect;
+    }
+    .banner-contact .banner-copy { transform: none; }
+    .banner-community .banner-copy { width: 66%; }
+    .banner-community p { max-width: 29ch; text-wrap: pretty; }
+    .community-whatsapp {
+      position: absolute;
+      z-index: 0;
+      top: 55%;
+      right: 7%;
+      display: grid;
+      place-items: center;
+      width: clamp(34px, 7.8vw, 50px);
+      aspect-ratio: 1;
+      border: 1px solid #b1f9c491;
+      border-radius: 32%;
+      background: linear-gradient(145deg, #22aa63, #097744);
+      color: #fff;
+      box-shadow: 0 6px 15px #0008, inset 0 1px 1px #fff2;
+      transform: rotate(8deg);
+      pointer-events: none;
+    }
+    .community-whatsapp .whatsapp-icon { width: 66%; height: 66%; }
+    .banner-community .banner-copy { z-index: 1; }
+
+    .course-name { white-space: nowrap; }
+    .banner-course h2, .banner-course p { text-wrap: balance; }
+    .banner-course .banner-copy { width: 59%; }
+    .banner-course .action-label { max-width: 100%; }
+    @media (min-width: 1100px) {
+      .banner-course .banner-art { mask-image: linear-gradient(90deg, #000 64%, transparent 87%); }
+    }
+    @media (max-width: 480px) {
+      .banner-community .banner-copy { width: 79%; }
+      .banner-community h2 { font-size: 24px; }
+      .banner-community p { max-width: 25ch; font-size: 15px; }
+      .banner-community .banner-art,
+      .banner-contact .banner-art {
+        width: 53%;
+        height: 90%;
+        top: 5%;
+        bottom: auto;
+      }
+      .banner-community .banner-art { top: 12%; height: 84%; object-position: 96% center; }
+      .community-whatsapp { right: 7%; top: 58%; }
+      .banner-course .banner-copy { width: 60%; padding: 18px 12px 18px 5px; }
+      .banner-course p { max-width: 18ch; font-size: 15px; }
+      .banner-course .action-label { font-size: clamp(14px, 4.05vw, 16px); }
     }
   </style>
   <!-- Google Tag Manager -->
@@ -89,24 +161,37 @@
       </div>
     </header>
 
-    <nav class="accesses" id="acessos" aria-label="Workshop, comunidade, contato e treinamento">
+    <nav class="accesses" id="acessos" aria-label="Gravação do workshop, comunidade, treinamento da Azul e contato">
       <a class="banner banner-workshop" href="https://workshop-gravacao.operfilexplicacomissario.com.br/">
-        <img class="workshop-art" src="assets/workshop-shl-emblema.jpg" width="640" height="640" decoding="async" alt="">
+        <img class="workshop-art" src="assets/workshop-gravacao-0312.jpg" width="640" height="640" decoding="async" alt="Gravação — Workshop 03/12">
         <div class="banner-copy">
-          <h2>Workshop SHL <span class="workshop-title-end">Sem Medo</span></h2>
+          <h2>Garanta a gravação do Workshop</h2>
           <span class="banner-rule" aria-hidden="true"></span>
           <p><span>3 de dezembro</span><span class="workshop-separator"> · </span><span class="workshop-time">19h às 22h · Ao vivo</span></p>
-          <span class="action-label"><span>Conhecer o workshop</span><span class="arrow" aria-hidden="true">›</span></span>
+          <span class="action-label"><span>Saiba mais</span><span class="arrow" aria-hidden="true">›</span></span>
         </div>
       </a>
 
       <a class="banner banner-community" href="https://chat.whatsapp.com/DW93ln7R81B8LDC6ECIoBT?s=cl&amp;p=i&amp;mlu=4&amp;ilr=4&amp;iam=2" target="_blank" rel="noopener noreferrer" aria-label="Entrar na comunidade de avisos do Emanoel">
         <img class="banner-art" src="assets/community-art.jpg" width="2070" height="760" loading="lazy" decoding="async" alt="">
+        <span class="community-whatsapp" aria-hidden="true">
+          <svg class="whatsapp-icon" viewBox="0 0 32 32" focusable="false"><use href="#whatsapp-mark"></use></svg>
+        </span>
         <div class="banner-copy">
           <h2>Comunidade de<br>avisos do Emanoel</h2>
           <span class="banner-rule" aria-hidden="true"></span>
-          <p>Materiais, links, aulas e orientações</p>
+          <p>Eventos, links de aulas e materiais, orientações e conteúdos exclusivos</p>
           <span class="action-label"><span>Entrar na comunidade</span><span class="arrow" aria-hidden="true">›</span></span>
+        </div>
+      </a>
+
+      <a class="banner banner-course" href="https://azul.operfilexplicacomissario.com.br/?src=organico-linknabio-instagram&amp;utm_source=organico&amp;utm_content=LinkDaBIO&amp;utm_term=Instagram" target="_blank" rel="noopener noreferrer" aria-label="Conhecer o treinamento da Azul">
+        <img class="banner-art" src="assets/azul-art.jpg" width="2003" height="785" loading="lazy" decoding="async" alt="">
+        <div class="banner-copy">
+          <h2>Treinamento <span class="course-name">da Azul</span></h2>
+          <span class="banner-rule" aria-hidden="true"></span>
+          <p>Prepare-se para o teste de perfil</p>
+          <span class="action-label"><span>Conhecer o treinamento</span><span class="arrow" aria-hidden="true">›</span></span>
         </div>
       </a>
 
@@ -115,19 +200,9 @@
         <div class="banner-copy">
           <h2>Tem alguma dúvida sobre algum dos meus cursos/ treinamentos?</h2>
           <span class="action-label">
-            <svg class="whatsapp-icon" viewBox="0 0 32 32" aria-hidden="true" focusable="false"><path fill="currentColor" d="M16.04 3C8.86 3 3.02 8.74 3.02 15.8c0 2.25.6 4.45 1.74 6.38L3 29l7.03-1.82a13.15 13.15 0 0 0 6 1.45h.01c7.18 0 13.02-5.74 13.02-12.8C29.06 8.75 23.22 3 16.04 3Zm0 23.47h-.01a10.96 10.96 0 0 1-5.58-1.51l-.4-.23-4.17 1.08 1.11-4-.26-.41a10.49 10.49 0 0 1-1.66-5.6c0-5.86 4.92-10.63 10.98-10.63 2.93 0 5.69 1.12 7.76 3.15a10.42 10.42 0 0 1 3.22 7.51c0 5.87-4.93 10.64-10.99 10.64Zm6.02-7.95c-.33-.16-1.96-.95-2.26-1.06-.3-.1-.52-.16-.74.16-.22.33-.85 1.06-1.04 1.28-.19.22-.38.25-.71.08-.33-.16-1.39-.5-2.64-1.6a9.86 9.86 0 0 1-1.83-2.24c-.19-.32-.02-.5.14-.66.15-.15.33-.38.49-.57.17-.19.22-.32.33-.54.11-.22.05-.41-.03-.57-.08-.16-.74-1.74-1.01-2.38-.27-.64-.54-.55-.74-.56h-.63c-.22 0-.57.08-.87.41-.3.32-1.15 1.1-1.15 2.68 0 1.58 1.18 3.11 1.34 3.33.16.22 2.31 3.46 5.6 4.85.78.33 1.4.53 1.87.68.79.24 1.5.21 2.07.13.63-.09 1.96-.79 2.24-1.55.27-.76.27-1.42.19-1.55-.08-.14-.3-.22-.63-.38Z"/></svg>
+            <svg class="whatsapp-icon" viewBox="0 0 32 32" aria-hidden="true" focusable="false"><path id="whatsapp-mark" fill="currentColor" d="M16.04 3C8.86 3 3.02 8.74 3.02 15.8c0 2.25.6 4.45 1.74 6.38L3 29l7.03-1.82a13.15 13.15 0 0 0 6 1.45h.01c7.18 0 13.02-5.74 13.02-12.8C29.06 8.75 23.22 3 16.04 3Zm0 23.47h-.01a10.96 10.96 0 0 1-5.58-1.51l-.4-.23-4.17 1.08 1.11-4-.26-.41a10.49 10.49 0 0 1-1.66-5.6c0-5.86 4.92-10.63 10.98-10.63 2.93 0 5.69 1.12 7.76 3.15a10.42 10.42 0 0 1 3.22 7.51c0 5.87-4.93 10.64-10.99 10.64Zm6.02-7.95c-.33-.16-1.96-.95-2.26-1.06-.3-.1-.52-.16-.74.16-.22.33-.85 1.06-1.04 1.28-.19.22-.38.25-.71.08-.33-.16-1.39-.5-2.64-1.6a9.86 9.86 0 0 1-1.83-2.24c-.19-.32-.02-.5.14-.66.15-.15.33-.38.49-.57.17-.19.22-.32.33-.54.11-.22.05-.41-.03-.57-.08-.16-.74-1.74-1.01-2.38-.27-.64-.54-.55-.74-.56h-.63c-.22 0-.57.08-.87.41-.3.32-1.15 1.1-1.15 2.68 0 1.58 1.18 3.11 1.34 3.33.16.22 2.31 3.46 5.6 4.85.78.33 1.4.53 1.87.68.79.24 1.5.21 2.07.13.63-.09 1.96-.79 2.24-1.55.27-.76.27-1.42.19-1.55-.08-.14-.3-.22-.63-.38Z"/></svg>
             <span>Entrar em contato</span>
           </span>
-        </div>
-      </a>
-
-      <a class="banner banner-course" href="https://azul.operfilexplicacomissario.com.br/?src=organico-linknabio-instagram&amp;utm_source=organico&amp;utm_content=LinkDaBIO&amp;utm_term=Instagram" target="_blank" rel="noopener noreferrer" aria-label="Conhecer o treinamento da Azul">
-        <img class="banner-art" src="assets/azul-art.jpg" width="2003" height="785" loading="lazy" decoding="async" alt="">
-        <div class="banner-copy">
-          <h2>Treinamento<br>da Azul</h2>
-          <span class="banner-rule" aria-hidden="true"></span>
-          <p>Prepare-se para o teste de perfil</p>
-          <span class="action-label"><span>Conhecer o treinamento</span><span class="arrow" aria-hidden="true">›</span></span>
         </div>
       </a>
     </nav>
